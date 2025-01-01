@@ -1,26 +1,25 @@
 from mobi_header import MobiHeader
-import os
+from pathlib import Path
 
 
 ebook_extensions = ['.mobi', '.azw3']
 
 def change_cdetype_to_pdoc(extensions=ebook_extensions):
     # Get location of this script.
-    path = os.path.realpath(os.path.dirname(__file__))
+    path = Path(__file__).resolve().parent
 
-    # Get list of all files and folders in the location of script.
-    try:
-        files_list = os.listdir(path)
-    except FileNotFoundError:
-        os.mkdir(path)
-        files_list = os.listdir(path)
+    # Get list of all files in the location of script.
+    files_list = []
+    for entry in path.iterdir():
+        if entry.is_file():
+            files_list.append(entry)
 
     for file_name in files_list:
         # Getting a file extension part from the whole file name.
-        file_extension = os.path.splitext(file_name)[1]
+        file_extension = Path(file_name).suffix
 
         if file_extension in extensions:
-            path_and_file = os.path.join(path, file_name)
+            path_and_file = path.joinpath(file_name)
             print('-> E-book filename:', file_name)
 
             try:

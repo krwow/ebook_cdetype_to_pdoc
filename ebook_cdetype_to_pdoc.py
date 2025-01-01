@@ -17,10 +17,7 @@ def change_cdetype_to_pdoc(extensions=ebook_extensions):
 
     for file_name in files_list:
         # Additional if clause in case it's folder or file without extension.
-        if '.' in file_name:
-            file_extension = '.' + file_name.rsplit('.', 1)[1]
-        else:
-            file_extension = ''
+        file_extension = os.path.splitext(file_name)[1]
 
         if file_extension in extensions:
             path_and_file = os.path.join(path, file_name)

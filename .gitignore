@@ -161,9 +161,6 @@ cython_debug/
 
 # # Project-related patterns:
 
-# Screenshots of an output from the app
-ebook_cdetype_to_pdoc_*.png
-
 # E-book formats, some of them being used for testing
 *.mobi
 *.azw3
@@ -172,7 +169,7 @@ ebook_cdetype_to_pdoc_*.png
 *.epub
 
 # Archives with e-books
-ebooks_*.zip
+sample_ebooks*.zip
 
 # Temporal folder
 temp/

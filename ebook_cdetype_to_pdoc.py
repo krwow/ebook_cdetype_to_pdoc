@@ -29,14 +29,14 @@ def change_cdetype_to_pdoc(extensions=ebook_extensions):
 
                 if current_cdetype_val == 'PDOC':
                     print('No need to change cdetype value.')
-                elif (current_cdetype_val != 'PDOC' and
-                        current_cdetype_val != None):
+                elif current_cdetype_val == None:
+                    print('No cdetype field found in this file.')
+                # Remaining meaningful options are: "EBOK" and "EBSP"?
+                else:
                     item.change_exth_metadata(501, 'PDOC')
                     item.to_file()
                     new_cdetype_val = item.get_exth_value_by_id(501)
                     print('New cdetype value:', new_cdetype_val)
-                elif current_cdetype_val == None:
-                    print('No cdetype field found in this file.')
             except UnicodeDecodeError as exception_error:
                 print(('Encoding error. Cannot access metadata. Value of '
                       'cdetype will remain unchanged.'))

@@ -15,19 +15,17 @@ It updates *cdetype* metadata to *PDOC* in each e-book, if this field doesn't ha
 
 ## Installation
 
-*ebook_cdetype_to_pdoc* requires Python 3 to run it, that's the basic prerequisite. I'll refer to Python 3 later simply as Python, so keep this in mind. *ebook_cdetype_to_pdoc.py* was tested on Python 3.13.1, but it should be fine with any future versions for a while.
+*ebook_cdetype_to_pdoc* requires Python 3 to run it, that's the basic prerequisite. I'll refer to Python 3 later simply as Python, so keep this in mind.
 
-The same rule applies to *mobi_header* package, but I recommend using it in version I used, that's *mobi_header 0.0.4*. I refer to this version in instructions below.
+*ebook_cdetype_to_pdoc.py* was tested on Python 3.13.1, but it should be fine with any future versions for a while. The same rule applies to *mobi_header* package and its requirements, so I recommend using all packages in the same versions as in requirements file.
 
 ### On Windows
 
-After having Python installed (if you don't have it yet, you can find it [there](https://www.python.org/downloads/)), you need to install extra package (*mobi_header*) from *pip* by typing in cmd/PowerShell/Terminal:
+After having Python installed (if you don't have it yet, you can find it [there](https://www.python.org/downloads/)), you need to install extra packages (*mobi_header* and other packages it requires) from *pip*. Download [requirements.txt](./requirements.txt) file from this repository and install packages listed in this file by typing in cmd/PowerShell/Terminal:
 
 ```
-py -m pip install mobi_header==0.0.4
+py -m pip install -r requirements.txt
 ```
-
-All other packages required by *mobi_header* will be downloaded and installed during that.
 
 Then you just need to get *ebook_cdetype_to_pdoc.py* file from this repository.
 
@@ -40,12 +38,10 @@ Ubuntu has Python installed by default, so start with installing *pip*, a packag
 apt-get install -y python3-pip
 ```
 
-Then get *mobi_header* - a package from *pip* required for *ebook_cdetype_to_pdoc.py* to run:
+Then get additional packages from *pip*, that is *mobi_header* and other packages needed by it, required for *ebook_cdetype_to_pdoc.py* to work. In order to do that download [requirements.txt](./requirements.txt) file from this repository first, then run the following in Terminal:
 ```
-python3 -m pip install mobi_header==0.0.4
+python3 -m pip install -r requirements.txt
 ```
-
-Rest of the required by *mobi_header* packages will be installed alongside it.
 
 Then all that is left is to download *ebook_cdetype_to_pdoc.py* from this repository.
 

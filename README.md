@@ -59,7 +59,7 @@ For now *ebook_cdetype_to_pdoc* supports e-book files only with **.mobi* and **.
 
 This application is based on open source software, including:
 - [Python](https://www.python.org/)
-- [mobi-header](https://pypi.org/project/mobi-header/)
+- mobi-header ([PyPI](https://pypi.org/project/mobi-header/) / [GitHub](https://github.com/SolaProject/mobi_header))
 
 Many thanks to authors of all packages and libraries installed along with software mentioned above.
 

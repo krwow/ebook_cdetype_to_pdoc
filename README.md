@@ -11,6 +11,8 @@ Issue has been known at least since October 2023, but producer of e-book readers
 
 ## How it works
 
+Script edits file content
+
 It updates *cdetype* metadata to *PDOC* in each e-book, if this field doesn't have such value yet. Script leaves files without *cdetype* metadata present untouched as this change seems to be unnecessary for them.
 
 ## Installation
@@ -46,6 +48,10 @@ python3 -m pip install -r requirements.txt
 Then all that is left is to download *ebook_cdetype_to_pdoc.py* from this repository.
 
 ## How to use
+
+> **IMPORTANT**:
+> 
+> This script modifies existing e-book files. In rare cases, this could damage a file, so please run it on backup copies of your e-books.
 
 Just place the *ebook_cdetype_to_pdoc.py* file in the folder with your e-books and run it, that's all.
 

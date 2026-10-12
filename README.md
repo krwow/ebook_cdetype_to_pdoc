@@ -66,3 +66,5 @@ Many thanks to authors of all packages and libraries installed along with softwa
 ## Licence
 
 *ebook_cdetype_to_pdoc* is licensed under the terms of the MIT License.
+
+<br>*First commit: 31.12.2024.*
